@@ -37,7 +37,7 @@ struct Format
  */
 typedef struct Format Format_t;
 
-int custom_printf(const char *format, ...);
+int cus_printf(const char *cus_format, ...);
 int handle_print(const char *fmt, int *i, va_list list,
                  char buffer[], int flags, int width, int precision, int size);
 
@@ -77,10 +77,10 @@ int print_memory_address(va_list types, char buffer[],
                          int flags, int width, int precision, int size);
 
 /* Functions to handle other specifiers */
-int get_flags(const char *format, int *i);
-int get_width(const char *format, int *i, va_list list);
-int get_precision(const char *format, int *i, va_list list);
-int get_size(const char *format, int *i);
+int cus_get_flags(const char *cus_format, int *cus_i);
+int cus_get_width(const char *cus_format, int *cus_i, va_list cus_list);
+int cus_get_precision(const char *cus_format, int *cus_i, va_list cus_list);
+int cus_get_size(const char *cus_format, int *cus_i);
 
 /* Function to print string in reverse */
 int print_reversed_string(va_list types, char buffer[],
@@ -115,4 +115,3 @@ long int convert_size_number(long int num, int size);
 long int convert_size_unsigned(unsigned long int num, int size);
 
 #endif /* PRINT_UTILS_H */
-
