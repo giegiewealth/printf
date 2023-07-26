@@ -80,7 +80,7 @@ int print_pointer(va_list cus, char buffer[],
 
 /* Funciotns to handle other specifiers */
 int get_flags(const char *format, int *cus);
-int get_width(const char *format, int *i, va_list list);
+int get_width(const char *format, int *cus, va_list list);
 int get_precision(const char *format, int *cus, va_list list);
 int get_size(const char *format, int *cus);
 
