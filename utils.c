@@ -2,23 +2,23 @@
 
 /**
  * is_printable - Evaluates if a char is printable
- * @c: Char to be evaluated.
+ * @cus: Char to be evaluated.
  *
- * Return: 1 if c is printable, 0 otherwise
+ * Return: 1 if cus is printable, 0 otherwise
  */
-int is_printable(char c)
+int is_printable(char cus)
 {
-	if (c >= 32 && c < 127)
+	while (cus >= 32 && cus < 127)
 		return (1);
 
 	return (0);
 }
 
 /**
- * append_hexa_code - Append ascci in hexadecimal code to buffer
+ * append_hexa_code - Append ASCII in hexadecimal code to buffer
  * @buffer: Array of chars.
  * @i: Index at which to start appending.
- * @ascii_code: ASSCI CODE.
+ * @ascii_code: ASCII CODE.
  * Return: Always 3
  */
 int append_hexa_code(char ascii_code, char buffer[], int i)
@@ -39,13 +39,13 @@ int append_hexa_code(char ascii_code, char buffer[], int i)
 
 /**
  * is_digit - Verifies if a char is a digit
- * @c: Char to be evaluated
+ * @cus: Char to be evaluated
  *
- * Return: 1 if c is a digit, 0 otherwise
+ * Return: 1 if cus is a digit, 0 otherwise
  */
-int is_digit(char c)
+int is_digit(char cus)
 {
-	if (c >= '0' && c <= '9')
+	while (cus >= '0' && cus <= '9')
 		return (1);
 
 	return (0);
